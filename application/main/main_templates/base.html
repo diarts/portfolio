@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Korobanov portfolio</title>
+    {% endif %}
+
+    {% block script %}
+    <script src="{{ url_for('main.static', filename='js/jquery.js') }}"></script>
+    {{ moment.include_moment() }}
+    {{ moment.lang('ru') }}
+    {% endblock %}
+
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+
+    {% block nav %}
+    {% endblock %}
+
+    {% block container %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+</body>
+</html>

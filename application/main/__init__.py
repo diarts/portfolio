@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-main = Blueprint('main', __name__, static_folder='static', template_folder='templates')
+main = Blueprint('main', __name__, static_folder='main_static', template_folder='main_templates')
 
 from . import errors, route
