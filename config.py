@@ -32,7 +32,7 @@ class Testing(Develop):
 
 config = {
     'development': Develop,
-    'testing': Testing,
+    'test': Testing,
     'production': Production,
 
     'default': Develop,
