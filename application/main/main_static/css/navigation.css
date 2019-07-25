@@ -1,0 +1,239 @@
+/*--ANIMATIONS--*/
+/*navigation main button hover animation*/
+@-moz-keyframes main_li_hovered {
+    from {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        height: 2px;
+        top: 80%;
+        border-radius: 3px;
+    }
+
+    65% {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        animation-timing-function: ease-out;
+        top: 75%
+    }
+}
+
+@-webkit-keyframes main_li_hovered {
+    from {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        height: 2px;
+        top: 80%;
+        border-radius: 3px;
+    }
+
+    65% {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        animation-timing-function: ease-out;
+        top: 75%
+    }
+}
+
+@keyframes main_li_hovered {
+    from {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        height: 2px;
+        top: 80%;
+        border-radius: 3px;
+    }
+
+    65% {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        animation-timing-function: ease-out;
+        top: 75%
+    }
+}
+
+/*navigation main button unhovered animation*/
+
+@-moz-keyframes main_li_unhovered {
+    from {
+        height: 2px;
+        top: 80%;
+        border-radius: 3px;
+    }
+
+    to {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    35% {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        animation-timing-function: ease-out;
+        top: 75%
+    }
+}
+
+@-webkit-keyframes main_li_unhovered {
+    from {
+        height: 2px;
+        top: 80%;
+        border-radius: 3px;
+    }
+
+    to {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    35% {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        animation-timing-function: ease-out;
+        top: 75%
+    }
+}
+
+@keyframes main_li_unhovered {
+    from {
+        height: 2px;
+        top: 80%;
+        border-radius: 3px;
+    }
+
+    to {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    35% {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        animation-timing-function: ease-out;
+        top: 75%
+    }
+}
+
+/*--STYLES--*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 40px;
+    padding: 0px 30px;
+
+    background-color: #2d204e;
+
+    font-family: Comfortaa;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    box-shadow: 0 2px 6px 1px black;
+}
+
+nav > a {
+    display: inline-block;
+    height: 90%;
+    color: inherit;
+}
+
+.nav_logo {
+    height: 100%;
+}
+
+.nav_list {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    background-color: inherit;
+}
+
+.nav_list li {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    white-space: nowrap;
+
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.nav_list > li{
+    height: 100%;
+}
+
+.nav_list a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+}
+
+.nav_hover_line {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 75%;
+    right: auto;
+    left: 0%;
+
+    background-color: white;
+    border-radius: 0px;
+}
+
+.nav_hover_line.unhovered{
+    -moz-animation: 0.7s main_li_unhovered;
+    -webkit-animation: 0.7s main_li_unhovered;
+    animation: 0.7s main_li_unhovered;
+}
+
+.nav_hover_line.hovered {
+    width: 100%;
+    height: 2px;
+    left: auto;
+    right: 0%;
+    top: 80%;
+
+    border-radius: 3px;
+
+    -moz-animation: 0.7s main_li_hovered;
+    -webkit-animation: 0.7s main_li_hovered;
+    animation: 0.7s main_li_hovered;
+}

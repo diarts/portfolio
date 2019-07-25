@@ -1,0 +1,25 @@
+{% macro child_render(child_list, open_button_class, list_open_direction, depth=0, first_open_direction='dropdown') %}
+    {% if depth %}
+        <ul class="{{ list_open_direction }}">
+    {% else %}
+        <ul class="{{ first_open_direction }}">
+    {% endif %}
+{% for child in child_list %}
+    {% if child|is_list() %}
+        <li class="{{ open_button_class }}">
+            <div class="li_hover_line"></div>
+            <span class="button_text">{{ child[0].ru_text }}</span>
+            <div class="open_arrow">&#10148;</div>
+            <div class="hover_background_down"></div>
+            <div class="hover_background_up"></div>
+            {{- child_render(child[1], open_button_class, list_open_direction, 1) }}
+        </li>
+    {% else %}
+        <li>
+            <a href="{{ child.link }}"><span class="button_text">{{ child.ru_text }}</span></a>
+            <div class="nav_child_hover_line"></div>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+{%- endmacro %}

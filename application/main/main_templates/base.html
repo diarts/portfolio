@@ -8,26 +8,31 @@
         <title>Korobanov portfolio</title>
     {% endif %}
 
-    {% block script %}
-    <script src="{{ url_for('main.static', filename='js/jquery.js') }}"></script>
-    {{ moment.include_moment() }}
-    {{ moment.lang('ru') }}
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('main.static', filename='css/clear_styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('main.static', filename='css/fonts.css') }}">
+        <link rel="stylesheet" href="{{ url_for('main.static', filename='css/base.css') }}">
     {% endblock %}
 
-    {% block style %}
+    {% block script %}
+        <script src="{{ url_for('main.static', filename='js/jquery.js') }}"></script>
+        <script src="{{ url_for('main.static', filename='js/jquery-ui.min.js') }}"></script>
+        {{ moment.include_moment() }}
+        {{ moment.lang('ru') }}
+        <script src="{{ url_for('main.static', filename='js/base.js') }}"></script>
     {% endblock %}
 </head>
 <body>
-    {% block header %}
-    {% endblock %}
+{% block nav %}
+{% endblock %}
 
-    {% block nav %}
-    {% endblock %}
+{% block header %}
+{% endblock %}
 
-    {% block container %}
-    {% endblock %}
+{% block container %}
+{% endblock %}
 
-    {% block footer %}
-    {% endblock %}
+{% block footer %}
+{% endblock %}
 </body>
 </html>

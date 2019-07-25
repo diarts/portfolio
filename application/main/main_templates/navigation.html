@@ -1,0 +1,31 @@
+{% from "macroses/button_render.html" import child_render %}
+
+<nav>
+    <a href="{{ url_for('main.index') }}">
+        <img src="{{ url_for('main.static', filename='images/logo.png') }}" alt="Talking portfolio logo"
+             class="nav_logo">
+    </a>
+    <ul class="nav_list">
+        {% if buttons_dict['nav'] %}
+            {% for button in buttons_dict['nav'] %}
+                {% if button|is_list() %}
+                    <li class="list_toggle">
+                        {% if button[0].link == '<USER_LOGIN>' %}
+                            <img src="https://picsum.photos/200/200" alt="user icon" class="user_icon">
+                        {% endif %}
+                        <span class="button_text">{{ button[0].ru_text }}</span>
+                        <span class="open_arrow">&#10148;</span>
+                        <div class="hover_background_down"></div>
+                        <div class="hover_background_up"></div>
+                        {{ child_render(button[1], 'list_toggle', 'dropleft') }}
+                    </li>
+                {% else %}
+                    <li>
+                        <a href=""><span class="button_text">{{ button.ru_text }}</span></a>
+                        <div class="nav_hover_line"></div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </ul>
+</nav>
