@@ -16,7 +16,6 @@
 
     {% block script %}
         <script src="{{ url_for('main.static', filename='js/jquery.js') }}"></script>
-        <script src="{{ url_for('main.static', filename='js/jquery-ui.min.js') }}"></script>
         {{ moment.include_moment() }}
         {{ moment.lang('ru') }}
         <script src="{{ url_for('main.static', filename='js/base.js') }}"></script>

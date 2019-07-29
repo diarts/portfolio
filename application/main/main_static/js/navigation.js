@@ -44,11 +44,6 @@ $(document).ready(() => {
 
             $(this).children('.hover_background_down').css('background-color', child_color);
             $(this).children('.hover_background_up').css('background-color', child_color);
-
-
-            let open_arrow_box_size = parseInt($(this).css('height'), 10) / 2;
-            let open_arrow = $(this).children('.open_arrow');
-            open_arrow.css('width', `${open_arrow_box_size}`);
         });
     });
 });

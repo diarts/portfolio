@@ -50,6 +50,7 @@ img {
 
 .open_arrow {
     z-index: 2;
+    width: auto;
     margin-left: 5px;
     font-size: 0%;
 
@@ -91,14 +92,14 @@ img {
     bottom: 0px;
 
     border-top-left-radius: 5px;
-    transition: height 1s;
+    transition: height 0.5s;
     transition-delay: 0.5s;
 }
 
 .hover_background_up.hover {
     height: 10%;
 
-    transition: 1s;
+    transition: 0.5s;
 }
 
 /*users*/
